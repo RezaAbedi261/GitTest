@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id "androidx.navigation.safeargs.kotlin"
+    id 'com.huawei.agconnect'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.core:core-ktx:1.9.0"
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+    // Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.21'
+    implementation group: 'io.reactivex.rxjava2', name: 'rxandroid', version: '2.1.1'
+
+    // Activity KTX for viewModels()
+    implementation "androidx.activity:activity-ktx:1.4.0"
+
+    // Architectural Components
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:8.6.3'
+
+//    implementation "cab.snapp:snapp-report-module:1.1.9"
+//    implementation "cab.snapp:arch:2.9.0-beta4"
+//    implementation "cab.snapp:network-base-module:3.1.0"
+//    implementation "cab.snapp:map-module:2.13.3-alpha10"
+//    implementation "cab.snapp:account-authenticator-module:1.2.0"
+//    implementation "cab.snapp:deeplink-module:1.1.2"
+//    implementation "cab.snapp:dialog-module:1.7.1"
+//    implementation "cab.snapp:event-manager-module:2.12.4"
+//    implementation "cab.snapp:notification-module:1.3.0"
+//    implementation "cab.snapp:shared-pref-module:1.0.2"
+//    implementation "cab.snapp:ui-kit-passenger-module:3.1.9"
+//    implementation "cab.snapp:cheetah-module:2.3.0"
+//    implementation "cab.snapp:smapp-api-module:1.0.1"
+//    implementation "cab.snapp:qe-module:1.2.0"
+//    implementation "cab.snapp:coala-module:0.10.5"
+//    implementation "cab.snapp:ktx-utility:1.0.0-beta-12"
+//    implementation "cab.snapp:webview:1.1.6"
+//    implementation "cab.snapp:location-kit:1.1.1"
+//    implementation "cab.snapp:snapp-core-messaging:1.3.3"
+//    implementation "cab.snapp.box:android-native:2.0.16"
+//    implementation "cab.snapp.superapp:analytics-api:1.1.0"
+//    implementation "cab.snapp:uikit:"
+
+
+//    //Snapp dependencies
+//    implementation("cab.snapp:dialog-module:1.7.1")
+//    implementation("cab.snapp.superapp:analytics-api:1.1.0")
+//    implementation("cab.snapp:map-module:2.13.3-alpha10")
+//    //    implementation("com.snappbox:module.map:0.0.13")
+//    implementation("cab.snapp:arch:2.9.0-beta4")
+////    implementation("cab.snapp:utility-module:1.5.1")
+//    implementation("cab.snapp:ktx-utility:1.0.0-beta-11")
+//    implementation("cab.snapp:smapp-api-module:1.0.1")
+//    implementation("cab.snapp:notification-module:1.3.0")
+//    api("cab.snapp:ui-kit-passenger-module:3.0.0-beta53"){
+////        exclude("com.android.support.constraint","constraint-layout")
+//    }
+//    implementation("cab.snapp:ui-kit-core-module:3.0.0-beta53"){
+////        exclude("com.android.support.constraint","constraint-layout")
+//    }
+//    implementation("cab.snapp:event-manager-module:2.11.1")
+
+
+}

@@ -1,0 +1,57 @@
+include ':app'
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+
+        maven {
+            // Nexus
+            url = uri("https://nexus3.snpb.app:8443/repository/maven-public/")
+            credentials {
+                username = "ali.shiralizade"
+                password = "!Admin12345678"
+            }
+        }
+        maven{
+            // Mapbox
+            url = uri( "https://repo.snapp.tech/repository/android-repo-mapbox")
+        }
+        maven {
+            // google()
+            url = uri( "https://repo.snapp.tech/repository/android-repo-google/")
+        }
+        maven {
+            // url = uri( "https://maven.google.com/")
+            url = uri( "https://repo.snapp.tech/repository/android-repo-maven-google/")
+        }
+        maven {
+            // mavenCentral()
+            url = uri( "https://repo.snapp.tech/repository/android-repo-maven/")
+        }
+        maven {
+            // url = uri( "https://plugins.gradle.org/m2/")
+            url = uri( "https://repo.snapp.tech/repository/android-repo-plugins/")
+        }
+        maven {
+            // jcenter()
+            url = uri( "https://repo.snapp.tech/repository/android-repo-jcenter-bintray/")
+        }
+        maven {
+            // support HMS in Snapp LocationKit Module
+            url = uri( "https://repo.snapp.tech/repository/android-repo-huawei/")
+        }
+        maven {
+            // jitpack()
+            url = uri( "https://repo.snapp.tech/repository/android-repo-jitpack")
+        }
+        maven {
+            // Snapp Artifactory
+            url = uri("https://artifactory.snapp.tech/artifactory/gradle-release-local")
+            credentials {
+                username = "ali.shiralizade"
+                password = "!Admin123456789"
+            }
+        }
+    }
+}
+rootProject.name = "My Application"
+

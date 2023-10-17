@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+
+        google()
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2' }
+        maven { url = uri("https://developer.huawei.com/repo/") }
+        maven { url "https://www.jitpack.io" }
+        gradlePluginPortal()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.2.2"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.1"
+        classpath "com.github.triplet.gradle:play-publisher:2.3.0"
+        classpath "com.google.gms:google-services:4.3.10"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2"
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.0'
+        classpath 'com.huawei.agconnect:agcp:1.6.4.300'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
