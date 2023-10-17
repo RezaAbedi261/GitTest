@@ -20,6 +20,7 @@ class VisualizerView(context: Context, attrs: AttributeSet) : View(context, attr
         paint.color = Color.BLUE
         paint.strokeWidth = 3f
         paint.isAntiAlias = true
+        paint.isAntiAlias = true
     }
 
     fun startVisualizer(mediaPlayer: MediaPlayer) {
